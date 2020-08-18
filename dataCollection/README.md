@@ -1,7 +1,7 @@
 # handwritingCollection
  - 筆記した手書き文字をjson/pngで保存するシステム
 
-![screenshot](https://gyazo.com/f86386d1400328a67f79a4aa288d291a)
+![screenshot](https://gyazo.com/f86386d1400328a67f79a4aa288d291a/raw)
 
 ## usage
 1. プログラムを起動し，領域内に筆記
