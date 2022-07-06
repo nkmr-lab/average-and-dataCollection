@@ -25,10 +25,10 @@ class Spline {
     PointF [] _retPoints = new PointF [_arrayPt.length*_multiple];
     _retPoints[0] = new PointF( _arrayPt[0].x, _arrayPt[0].y );
     _retPoints[_arrayPt.length*_multiple-1] = new PointF( _arrayPt[_arrayPt.length-1].x, _arrayPt[_arrayPt.length-1].y );
-    for ( int i=1; i<_arrayPt.length*_multiple; i++ ) {
+    for ( int i=1; i<_arrayPt.length*_multiple-1; i++ ) {
       _retPoints[i] = new PointF(
-      i*(_arrayPt[0].x+_arrayPt[_arrayPt.length-1].x)/(_arrayPt.length*_multiple-1), 
-      i*(_arrayPt[0].x+_arrayPt[_arrayPt.length-1].x)/(_arrayPt.length*_multiple-1) );
+      _arrayPt[0].x+i*(_arrayPt[_arrayPt.length-1].x-_arrayPt[0].x)/(_arrayPt.length*_multiple-1), 
+      _arrayPt[0].y+i*(_arrayPt[_arrayPt.length-1].y-_arrayPt[0].y)/(_arrayPt.length*_multiple-1) );
     }
     return _retPoints;
   }
